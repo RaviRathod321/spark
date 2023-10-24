@@ -1,0 +1,54 @@
+Learning spark one brick at a time
+
+Create a SparkSession
+spark = SparkSession.builder.appName("Read CSV").getOrCreate()
+
+# Read CSV file into a DataFrame
+df = spark.read.csv('/content/sample_data/california_housing_test.csv', header=True, inferSchema=True)
+
+# Show the DataFrame schema
+df.printSchema()
+
+# Show the first few rows of the DataFrame
+df.show()"
+
+1. Data Transformation and Cleaning:
+Data Cleaning: Techniques for handling missing data, outliers, and inconsistent data.
+Data Transformation: Methods for transforming data, such as feature engineering, normalization, and categorical variable encoding.
+
+2. Data Exploration and Analysis:
+Exploratory Data Analysis (EDA): Visualization and statistical methods to understand the data's characteristics.
+Descriptive Statistics: Computing basic statistics like mean, median, and standard deviation.
+Data Visualization: Using libraries like Matplotlib, Seaborn, or PySpark's built-in visualization tools for data exploration.
+
+3. Data Processing and Transformation:
+SQL Operations: Perform SQL operations on DataFrames using the spark.sql() method.
+DataFrame Operations: Learn about various DataFrame operations such as filtering, grouping, aggregating, and joining.
+User-Defined Functions (UDFs): Create custom functions to apply transformations on DataFrame columns.
+
+4. Machine Learning with PySpark:
+MLlib: Explore PySpark's machine learning library, MLlib, for various machine learning algorithms.
+Pipeline API: Understand and use the Pipeline API for building and tuning machine learning workflows.
+Model Evaluation: Learn techniques for evaluating machine learning models, including metrics and cross-validation.
+
+5. Optimizations and Performance Tuning:
+Caching: Learn when and how to cache DataFrames for optimizing iterative algorithms.
+Partitioning: Understand DataFrame partitioning for better parallelism and performance.
+Broadcasting: Use broadcasting for efficiently joining small DataFrames with large ones.
+Cluster Configuration: Understand how cluster configurations affect Spark jobs.
+
+6. Real-Time Data Processing:
+Structured Streaming: Explore structured streaming concepts for real-time data processing.
+Windowed Aggregations: Learn about windowed operations for processing data in fixed time intervals.
+
+7. Integration with Big Data Ecosystem:
+Integration with Hive and HBase: Understand how to integrate PySpark with Hive and HBase for advanced data processing.
+Integration with Data Lakes: Learn how PySpark integrates with data lakes like Apache Hadoop HDFS and Amazon S3.
+
+8. Deployment and Scalability:
+Cluster Deployment: Deploy Spark applications on clusters and understand cluster managers like Apache Mesos and Apache YARN.
+Scalability: Learn techniques for scaling PySpark applications horizontally and vertically.
+
+9. Advanced Topics:
+Graph Processing: Understand graph algorithms and processing using GraphX.
+Deep Learning with Spark: Explore libraries like TensorFlow on Spark for deep learning tasks.
